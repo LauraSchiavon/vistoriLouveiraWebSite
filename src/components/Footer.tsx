@@ -3,7 +3,7 @@ import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5511999999999"; // Substitua pelo número real
+    const phoneNumber = "5519996652261";
     const message =
       "Olá! Gostaria de mais informações sobre vistoria veicular.";
     window.open(
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-red-500" />
-                <a href="tel:+5511999999999" className="hover:underline">
+                <a href="tel:+5519996652261" className="hover:underline">
                   (11) 9999-9999
                 </a>
               </div>

@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({}) => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5511999999999";
+    const phoneNumber = "5519996652261";
     const message = "Olá! Gostaria de agendar uma vistoria veicular.";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,

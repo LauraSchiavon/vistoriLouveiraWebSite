@@ -3,7 +3,7 @@ import { Car, Truck, Bike, CheckCircle } from "lucide-react";
 
 const Services: React.FC = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5511999999999"; // Substitua pelo número real
+    const phoneNumber = "5519996652261";
     const message = "Olá! Gostaria de agendar uma vistoria veicular.";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,

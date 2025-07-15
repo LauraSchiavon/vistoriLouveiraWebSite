@@ -37,11 +37,9 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({ isOpen, onClose }) => {
     setSubmitStatus("idle");
 
     try {
-      // URL do webhook do Make.com (você vai configurar isso)
       const makeWebhookUrl =
         "https://hook.us2.make.com/4zu4stco0o3pxcsovloh1bvufl56ynl2";
 
-      // Preparar dados para envio
       const agendamentoData = {
         nome: formData.nome,
         telefone: formData.telefone,
@@ -52,13 +50,12 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({ isOpen, onClose }) => {
         horario: formData.horario,
         dataCompleta: `${formData.data}T${formData.horario}:00`,
         timestamp: new Date().toISOString(),
-        // Dados adicionais para o Make.com
+
         emailCalendar: "lauraschiavon00@gmail.com",
         nomeEmpresa: "Vistori Louveira",
         localVistoria: "Vistori Louveira - Louveira, SP",
       };
 
-      // Enviar para Make.com
       const response = await fetch(makeWebhookUrl, {
         method: "POST",
         headers: {
@@ -70,7 +67,6 @@ const ScheduleModal: React.FC<ScheduleModalProps> = ({ isOpen, onClose }) => {
       if (response.ok) {
         setSubmitStatus("success");
 
-        // Resetar formulário após 2 segundos
         setTimeout(() => {
           setFormData({
             nome: "",
