@@ -1,11 +1,15 @@
-import React from 'react';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import React from "react";
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '5511999999999'; // Substitua pelo número real
-    const message = 'Olá! Gostaria de mais informações sobre vistoria veicular.';
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    const phoneNumber = "5511999999999"; // Substitua pelo número real
+    const message =
+      "Olá! Gostaria de mais informações sobre vistoria veicular.";
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
 
   return (
@@ -13,15 +17,17 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">V</span>
-              </div>
-              <h3 className="text-2xl font-bold">Vistori Louveira</h3>
+            <div className="flex items-center space-x-2">
+              <img
+                src="/logo.jpeg"
+                alt="Vistori Louveira"
+                className="w-30 h-20 mb-4 rounded-lg"
+              />
             </div>
             <p className="text-gray-300 mb-6">
-              Especialistas em vistoria veicular em Louveira e região. 
-              Oferecemos serviços profissionais e de qualidade para todos os tipos de veículos.
+              Especialistas em vistoria veicular em Louveira e região.
+              Oferecemos serviços profissionais e de qualidade para todos os
+              tipos de veículos.
             </p>
             <button
               onClick={handleWhatsAppClick}
@@ -36,15 +42,29 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-red-500" />
-                <span>(11) 9999-9999</span>
+                <a href="tel:+5511999999999" className="hover:underline">
+                  (11) 9999-9999
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-red-500" />
-                <span>vistorilouveira@gmail.com</span>
+                <a
+                  href="mailto:vistorilouveira@gmail.com"
+                  className="hover:underline"
+                >
+                  vistorilouveira@gmail.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-red-500" />
-                <span>Louveira, SP</span>
+                <a
+                  href="https://www.google.com.br/maps/place/Vistori+Vistoria+Veicular/@-23.0944732,-46.9645145,16z/data=!4m10!1m2!2m1!1sAv.+Silv%C3%A9rio+Finamore,+1019+(sa%C3%ADda+para+Jundia%C3%AD)+-+Bairro+Jardim+Vera+Cruz+-+Louveira%2FSP!3m6!1s0x94cf2fdf702a5a6b:0xb94d4744aba095ed!8m2!3d-23.0922703!4d-46.9486948!15sCltBdi4gU2lsdsOpcmlvIEZpbmFtb3JlLCAxMDE5IChzYcOtZGEgcGFyYSBKdW5kaWHDrSkgLSBCYWlycm8gSmFyZGltIFZlcmEgQ3J1eiAtIExvdXZlaXJhL1NQWlUiU2F2IHNpbHbDqXJpbyBmaW5hbW9yZSAxMDE5IHNhw61kYSBwYXJhIGp1bmRpYcOtIGJhaXJybyBqYXJkaW0gdmVyYSBjcnV6IGxvdXZlaXJhIHNwkgEWY2FyX2luc3BlY3Rpb25fc3RhdGlvbpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuVFVOM2ExbDFOMlpuRUFFqgGzAQoJL20vMDFoZDU4CgkvbS8wNDFwNTEQASofIhtzYcOtZGEgcGFyYSBqdW5kaWHDrSBiYWlycm8oDDIfEAEiGxh16QejwDB9LUfCBFvtxS7eQCfAiydM0_Ez-zJXEAIiU2F2IHNpbHbDqXJpbyBmaW5hbW9yZSAxMDE5IHNhw61kYSBwYXJhIGp1bmRpYcOtIGJhaXJybyBqYXJkaW0gdmVyYSBjcnV6IGxvdXZlaXJhIHNw4AEA-gEECAAQFw!16s%2Fg%2F11gh_ll3gm?hl=pt-BR&entry=ttu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Louveira, SP
+                </a>
               </div>
             </div>
           </div>
