@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5519996652261";
+    const phoneNumber = "551938780509";
     const message =
       "Olá! Gostaria de mais informações sobre vistoria veicular.";
     window.open(
