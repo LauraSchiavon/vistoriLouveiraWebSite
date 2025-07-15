@@ -10,7 +10,7 @@ const About: React.FC = () => {
     },
     {
       icon: <Users className="w-8 h-8 text-red-600" />,
-      number: "5000+",
+      number: "30.000+",
       label: "Clientes Atendidos",
     },
     {

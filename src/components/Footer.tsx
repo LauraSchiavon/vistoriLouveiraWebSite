@@ -14,8 +14,21 @@ const Footer: React.FC = () => {
 
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 flex flex-col items-center">
+        <div className="w-full max-w-5xl h-96 mb-12 rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Mapa de Louveira"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.573014837845!2d-46.95050568444223!3d-23.092270284982137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf2fdf702a5a6b%3A0xb94d4744aba095ed!2sAv.%20Silv%C3%A9rio%20Finamore%2C%201019%20-%20Jardim%20Vera%20Cruz%2C%20Louveira%20-%20SP%2C%2013270-000!5e0!3m2!1spt-BR!2sbr!4v1689319701360!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
+        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2">
               <img
@@ -90,10 +103,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center w-full max-w-5xl">
           <p className="text-gray-400">
             © 2025 Vistori Louveira. Todos os direitos reservados. Desenvolvido
-            por <p>Sansch Agência</p>
+            por <span className="inline-block">Sansch Agência</span>
           </p>
         </div>
       </div>

@@ -18,11 +18,11 @@ const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="bg-gradient-to-br from-gray-900 to-black text-white py-32 mt-20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           <img
-            src="/hero.jpeg"
+            src="/hero.png"
             alt="Vistoria Veicular"
-            className="w-full md:w-1/2 rounded-2xl shadow-2xl object-cover"
+            className="w-[90%] lg:w-[30%] rounded-2xl shadow-2xl object-cover"
           />
 
           <div className="text-center md:text-left md:w-1/2">
