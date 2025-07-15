@@ -5,7 +5,7 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Award className="w-8 h-8 text-red-600" />,
-      number: "5+",
+      number: "10",
       label: "Anos de Experiência",
     },
     {
