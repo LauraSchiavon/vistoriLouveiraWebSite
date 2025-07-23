@@ -2,14 +2,11 @@ import React from "react";
 import { Car, Truck, Bike, CheckCircle } from "lucide-react";
 
 const Services: React.FC = () => {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "551938780509";
-    const message = "Olá! Gostaria de agendar uma vistoria veicular.";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+  const phoneNumber = "551938780509";
+  const message = "Olá! Gostaria de agendar uma vistoria veicular.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
   const services = [
     {
@@ -83,12 +80,14 @@ const Services: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={handleWhatsAppClick}
-                className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
               >
                 Fazer Agora
-              </button>
+              </a>
             </div>
           ))}
         </div>

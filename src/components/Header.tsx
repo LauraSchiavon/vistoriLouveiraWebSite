@@ -1,20 +1,16 @@
 import React from "react";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone } from "lucide-react";
 
 interface HeaderProps {
   onScheduleClick: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "551938780509";
-    const message =
-      "Olá! Gostaria de mais informações sobre vistoria veicular.";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+  const phoneNumber = "551938780509";
+  const message = "Olá! Gostaria de mais informações sobre vistoria veicular.";
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
 
   return (
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -48,13 +44,15 @@ const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <button
-              onClick={handleWhatsAppClick}
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"
             >
               <Phone size={20} />
               <span>WhatsApp</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

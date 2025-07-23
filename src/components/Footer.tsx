@@ -2,16 +2,6 @@ import React from "react";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "551938780509";
-    const message =
-      "Olá! Gostaria de mais informações sobre vistoria veicular.";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
-
   return (
     <footer id="contact" className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4 flex flex-col items-center">
@@ -42,12 +32,14 @@ const Footer: React.FC = () => {
               Oferecemos serviços profissionais e de qualidade para todos os
               tipos de veículos.
             </p>
-            <button
-              onClick={handleWhatsAppClick}
+            <a
+              href="https://wa.me/551938780509?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20vistoria%20veicular."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold"
             >
               Falar no WhatsApp
-            </button>
+            </a>
           </div>
 
           <div>
