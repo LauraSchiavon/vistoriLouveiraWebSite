@@ -5,12 +5,25 @@ interface HeaderProps {
   onScheduleClick: () => void;
 }
 
+declare global {
+  interface Window {
+    gtag_report_conversion: (url: string) => void;
+  }
+}
+
 const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
   const phoneNumber = "551938780509";
   const message = "Olá! Gostaria de mais informações sobre vistoria veicular.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
+
+  // Função chamada no clique do botão do WhatsApp
+  const handleWhatsAppClick = () => {
+    if (typeof window.gtag_report_conversion === "function") {
+      window.gtag_report_conversion(whatsappLink);
+    }
+  };
 
   return (
     <header className="bg-white shadow-lg fixed w-full top-0 z-50">
@@ -48,6 +61,7 @@ const Header: React.FC<HeaderProps> = ({ onScheduleClick }) => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="hidden md:flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors"
             >
               <Phone size={20} />
